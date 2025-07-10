@@ -21,23 +21,31 @@ class BankManager:
 
     #TAKE AWAY METHOD
     def take_away(self, p_user_id, p_amount):
-        for l_user_id, l_user in self.repo.items():
-            if l_user_id == p_user_id and l_user.balance > 0:
-                l_user.balance -= p_amount
-                print(f'New balance: {l_user.balance}\n')
-                return True
-        print(f'Insufficient balance o user not found!\n')
-        return False
+        if p_amount > 5:
+            for l_user_id, l_user in self.repo.items():
+                if l_user_id == p_user_id and l_user.balance > 0:
+                    l_user.balance -= p_amount
+                    print(f'New balance: {l_user.balance}\n')
+                    return True
+            print(f'Insufficient balance o user not found!\n')
+            return False
+        else:
+            print(f"Amount very low!\n")
+            return False
 
     #DEPOSIT METHOD
     def deposit(self, p_user_id, p_amount):
-        for l_user_id, l_user in self.repo.items():
-            if l_user_id == p_user_id:
-                l_user.balance += p_amount
-                print(f'New balance: {l_user.balance}\n')
-                return True
-        print(f'User not found!\n')
-        return False
+        if p_amount > 0:
+            for l_user_id, l_user in self.repo.items():
+                if l_user_id == p_user_id:
+                    l_user.balance += p_amount
+                    print(f'New balance: {l_user.balance}\n')
+                    return True
+            print(f'User not found!\n')
+            return False
+        else:
+            print(f'Not deposit 0!\n')
+            return False
 
     #DISPLAY BALANCE
     def display_balance(self, p_user_id):

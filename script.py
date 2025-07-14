@@ -16,8 +16,9 @@ os.system('git add --all')
 print('--> ADD, DONE!')
 
 #ESEGUO IL COMMIT
-os.system('git commit -m "Update"')
-g_data_commit = datetime.datetime.now()
+g_data_commit = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+g_commit_msg = f'Update {g_data_commit}'
+os.system(f'git commit -m "{g_commit_msg}"')
 print('--> COMMIT, DONE!')
 
 #GIT PUSH

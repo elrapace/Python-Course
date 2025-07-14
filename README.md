@@ -1,3 +1,3 @@
-# Esercizi ed Esempi Python 🐍
+Python Exercises and Examples 🐍
 
-Questo repository contiene una raccolta di esercizi ed esempi pratici scritti in Python. È pensato per chi vuole esercitarsi, imparare o ripassare concetti fondamentali del linguaggio.
+This repository contains a collection of exercises and practical examples written in Python. It's designed for those who want to practice, learn, or review fundamental concepts of the language.

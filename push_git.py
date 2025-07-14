@@ -13,6 +13,7 @@ print(f'--> CURRENT DIRECTORY: {os.getcwd()}')
 
 #ESEGUO COMANDI GIT
 g_exit_code = os.system('git add --all')
+
 if g_exit_code == 0:
     print('--> ADD, DONE ✅')
 else:
@@ -22,6 +23,7 @@ else:
 g_data_commit = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 g_commit_msg = f'Update {g_data_commit}'
 g_exit_code = os.system(f'git commit -m "{g_commit_msg}"')
+
 if g_exit_code == 0:
     print('--> COMMIT, DONE ✅')
 else:

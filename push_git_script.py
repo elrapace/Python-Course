@@ -29,7 +29,6 @@ if g_exit_code == 0:
 else:
     print('--> ERROR COMMIT ❌')
 
-
 #ESEGUO IL PUSH
 g_exit_code = os.system("git push")
 

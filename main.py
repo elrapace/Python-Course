@@ -1,38 +1,22 @@
-import sys
+import math
+x = min(iterable)
+y = max(itarable)
 
-#ARGOMENTI DA LINEA DI COMANDO
-print(f'Argomenti da linea di comando: {sys.argv}')
+#ABS
+x = abs(value)
 
-print(f'Nome dello script: {sys.argv[0]}')
+#POW (x)^y
+g_pow = pow(x, y)
 
-if len(sys.argv) > 1:
-    print(f'Primo argomento: {sys.argv[1]}')
-else:
-    print(f'Nessun argomento fornito.')
 
-#USCITA DAL PROGRAMMA
-if len(sys.argv) < 2:
-    print('Errore: nessun argomento fornito.')
-    sys.exit(1) #USCITA CON CODICE DI ERRORE 1
-print('PROGRAMMA ESEGUITO CORRETTAMENTE')
+#SQRT
+x = math.sqrt(value)
 
-#INPUT E OUTPUT STANDARD
-#LEGGERE INPUT UTENTE 
-print('Inserisci nome: ')
-g_nome = sys.stdin.readline().strip()
+#ARROTONDO PER ECCESSO
+x = math.ceil(value)
 
-#SCRIVERE L"OUTPUT SU STDOUT
-sys.stdout.write(f'Ciao, {g_nome}!\n')
+#ARROTONDO PER DIFETTO
+x = math.floor(value)
 
-#SCRIVERE MESSAGGI DI ERRORE
-sys.stderr.write('Questo é un messaggio di errore!')
-
-#VERIFICARE DIMENSIONE DI UN OGGETTO IN MEMORIA
-g_list = [1,2,3,4,5]
-print(f'Dimensione della lista: {sys.getsizeof(g_list)} byte')
-
-#VERIFICARE SE UN MODULO É GIÁ IMPORTATO
-if 'nome_modulo' in sys.modules:
-    print('Modulo giá importato')
-else:
-    print('Modulo non importato')
+#PI VALUE
+x = math.pi

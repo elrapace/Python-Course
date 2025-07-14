@@ -2,7 +2,7 @@ import sys, os, datetime
 
 #CONTROLLO IL SECONDO AROGMENTO DOPO IL NOME DELLO SCRIPT CHE PRENDO IL PERCORSO IN CUI ESEGUIRE LO SCRIPT
 if len(sys.argv) < 2:
-	print('--> ERROR, NO ARGUMENTS!')
+	print(f'--> ERROR, NO ARGUMENTS! SYNTAX: <python3 {sys.argv[0]} /path>')
 	sys.exit(1) #USCITA CON CODICE DI ERRORE 1
 	
 print('--> SCRIPT START...')

@@ -22,5 +22,9 @@ os.system(f'git commit -m "{g_commit_msg}"')
 print('--> COMMIT, DONE!')
 
 #GIT PUSH
-os.system('git push')
+g_username = 'elrapace'
+g_repo_name = 'Python-Course'
+g_repo_token = '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'
+g_url_push = f'https://{g_username}:{g_repo_token}@github.com/{g_username}/{g_repo_name}.git'
+os.system(f'git push {g_url_push}')
 print('--> PUSH, DONE!')

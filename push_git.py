@@ -1,4 +1,4 @@
-import sys, os, datetime, subprocess
+import sys, os, datetime
 
 #CONTROLLO IL SECONDO AROGMENTO DOPO IL NOME DELLO SCRIPT CHE PRENDO IL PERCORSO IN CUI ESEGUIRE LO SCRIPT
 if len(sys.argv) < 2:
@@ -28,6 +28,7 @@ else:
     print('--> ERROR COMMIT ❌')
 
 
+#ESEGUO IL PUSH
 g_exit_code = os.system("git push")
 
 if g_exit_code == 0:

@@ -22,7 +22,15 @@ g_accrued_permits_days, g_accrued_permits_hours, g_accrued_permits_minutes = day
 print(f'\nHOLIDAYS: {g_accrued_holidays_days} DAYS, {g_accrued_holidays_hours} HOURS, {g_accrued_holidays_minutes} MINUTES')
 print(f'PERMITS: {g_accrued_permits_days} DAYS, {g_accrued_permits_hours} HOURS, {g_accrued_permits_minutes} MINUTES\n')
 
-# SCRITTURA DEI RISULTATI IN UN FILE DI TESTO
-with open('accrued_days.txt','w') as file:
-    file.write(f'\nHOLIDAYS: {g_accrued_holidays_days} DAYS, {g_accrued_holidays_hours} HOURS, {g_accrued_holidays_minutes} MINUTES\n')
-    file.write(f'PERMITS: {g_accrued_permits_days} DAYS, {g_accrued_permits_hours} HOURS, {g_accrued_permits_minutes} MINUTES\n')
+# RICHIESTA PER CONFERMA/NEGAZIONE SCRITTURA DEI DATI NEL FILE TXT
+g_confirm = input('YOU WANT TO WRITE DATA TO THE FILE? (y/n): ')
+
+if g_confirm.lower() == 'y':
+    # SCRITTURA DEI RISULTATI IN UN FILE DI TESTO
+    with open('accrued_days.txt','w') as file:
+        file.write(f'\nHOLIDAYS: {g_accrued_holidays_days} DAYS, {g_accrued_holidays_hours} HOURS, {g_accrued_holidays_minutes} MINUTES\n')
+        file.write(f'PERMITS: {g_accrued_permits_days} DAYS, {g_accrued_permits_hours} HOURS, {g_accrued_permits_minutes} MINUTES\n')
+    print('DATA SUCCESSFULLY WRITTEN TO FILE')
+else:
+    print('DATA NOT WRITTEN TO FILE')
+

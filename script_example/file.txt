@@ -1,0 +1,4 @@
+Lunedí 21 Luglio 2025
+Orario 11:40
+
+Esercizio converter file.txt to file.pdf
